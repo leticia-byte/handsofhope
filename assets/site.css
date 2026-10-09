@@ -385,3 +385,13 @@ footer{background:var(--ink);color:#C9D8E1;padding:clamp(3rem,6vw,4.5rem) 0 1.5r
 .story,.diff,.faq{overflow:hidden;}
 .story .wrap,.diff .wrap,.faq .wrap{position:relative;z-index:2;}
 @media (max-width:820px){.sec-art{display:none;}}
+
+/* ---------- Real mural photos as soft section backgrounds ---------- */
+.mural-bg{position:relative;isolation:isolate;}
+.mural-bg::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.17;}
+.mb-party::before{background-image:url(mural-party.jpg);}
+.mb-hand::before{background-image:url(mural-hand.jpg);}
+.mb-girl::before{background-image:url(mural-girl.jpg);}
+.mb-bulldog::before{background-image:url(mural-bulldog.jpg);}
+.reviews.mural-bg::before{opacity:.10;}

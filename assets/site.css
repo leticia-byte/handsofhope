@@ -389,12 +389,12 @@ footer{background:var(--ink);color:#C9D8E1;padding:clamp(3rem,6vw,4.5rem) 0 1.5r
 /* ---------- Real mural photos as soft section backgrounds ---------- */
 .mural-bg{position:relative;isolation:isolate;}
 .mural-bg::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.17;}
+  background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.153;}
 .mb-party::before{background-image:url(mural-party.jpg);}
 .mb-hand::before{background-image:url(mural-hand.jpg);}
 .mb-girl::before{background-image:url(mural-girl.jpg);}
 .mb-bulldog::before{background-image:url(mural-bulldog.jpg);}
-.reviews.mural-bg::before{opacity:.10;}
+.reviews.mural-bg::before{opacity:.09;}
 
 /* Story section is text-only now that the illustration is removed */
 .story .wrap{grid-template-columns:1fr;max-width:860px;}

@@ -4,7 +4,7 @@
   --cream:#EDE2D8;        /* warm paper */
   --white:#FFFFFF;
   --ink:#213A4C;          /* slate — text/headings/dark sections (primary) */
-  --ink-soft:#4E6270;     /* muted slate secondary text (AA) */
+  --ink-soft:#38495A;     /* muted slate secondary text (AA) */
   --primary:#213A4C;      /* slate — button bg, white text passes AA */
   --primary-deep:#16303F; /* hover */
   --sky:#CFE3EC;          /* light blue band */
@@ -44,7 +44,7 @@ section{position:relative;}
 /* ---------- Skip link + focus ---------- */
 .skip-link{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.7rem 1.1rem;border-radius:0 0 10px 0;z-index:1000;}
 .skip-link:focus{left:0;}
-:focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:4px;}
+:focus-visible{outline:3px solid transparent;outline-offset:2px;box-shadow:0 0 0 3px #fff,0 0 0 6px #213A4C !important;border-radius:6px;}
 
 /* ---------- Buttons ---------- */
 .btn{
@@ -93,18 +93,18 @@ section{position:relative;}
 .open-status.os-open .os-dot{background:#4FAE57;}
 .open-status.os-soon .os-dot{background:#D98A2B;}
 .open-status.os-closed .os-dot{background:#C6584F;}
-.open-status.os-open .os-text{color:#8FE0A0;}
-.open-status.os-soon .os-text{color:#F2C879;}
-.open-status.os-closed .os-text{color:#F0B4AE;}
+.open-status.os-open .os-text{color:#9FE8AE;}
+.open-status.os-soon .os-text{color:#F7D594;}
+.open-status.os-closed .os-text{color:#F6C9C3;}
 @media (prefers-reduced-motion:no-preference){
   .open-status.os-open .os-dot::after{animation:osPulse 2.2s ease-out infinite;}
 }
 @keyframes osPulse{0%{transform:scale(1);opacity:.35;}70%{transform:scale(2.4);opacity:0;}100%{opacity:0;}}
 /* On light backgrounds (contact card) use readable text colors */
 .contact .open-status .os-text{color:var(--ink);}
-.contact .open-status.os-open .os-text{color:#2E7D34;}
-.contact .open-status.os-soon .os-text{color:#9A5B10;}
-.contact .open-status.os-closed .os-text{color:#A83C33;}
+.contact .open-status.os-open .os-text{color:#1E6125;}
+.contact .open-status.os-soon .os-text{color:#7A4507;}
+.contact .open-status.os-closed .os-text{color:#8E2B23;}
 .contact .open-status{margin-top:0;}
 .tb-hours{display:inline-flex;align-items:center;gap:.5rem;}
 .hours-line{display:inline-flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
@@ -249,7 +249,7 @@ section{position:relative;}
 .stars{color:#F2C879;letter-spacing:2px;margin-bottom:.7rem;}
 .rev-card p{color:#DCE7EE;font-size:1rem;margin:0 0 1rem;}
 .rev-card .who{font-weight:700;color:#fff;font-size:.95rem;}
-.rev-note{font-size:.75rem;color:#9FB6C4;}
+.rev-note{font-size:.75rem;color:#B3C5D1;}
 
 /* ---------- FAQ ---------- */
 .faq{padding:clamp(3.5rem,8vw,6rem) 0;}
@@ -295,7 +295,7 @@ footer{background:var(--ink);color:#C9D8E1;padding:clamp(3rem,6vw,4.5rem) 0 1.5r
 .foot-social a:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px);}
 .foot-brand .bt{font-family:var(--font-head);color:#fff;font-size:1.5rem;}
 .foot-brand p{color:#9FB6C4;max-width:32ch;margin:.8rem 0 1.3rem;}
-.foot-col h4{color:#fff;font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem;font-family:var(--font-body);font-weight:700;}
+.foot-col h2,.foot-col h4{color:#fff;font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem;font-family:var(--font-body);font-weight:700;}
 .foot-col ul{list-style:none;margin:0;padding:0;}
 .foot-col li{margin-bottom:.6rem;}
 .foot-col a{color:#C9D8E1;text-decoration:none;}
@@ -398,3 +398,28 @@ footer{background:var(--ink);color:#C9D8E1;padding:clamp(3rem,6vw,4.5rem) 0 1.5r
 
 /* Story section is text-only now that the illustration is removed */
 .story .wrap{grid-template-columns:1fr;max-width:860px;}
+
+/* ================= Accessibility (WCAG 2.1 AA) ================= */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+/* Header over the video: translucent backing so header text keeps 4.5:1 even on bright frames */
+.site-header{background:rgba(19,34,46,.5);}
+/* Tagline over video gets its own backing for contrast */
+.hero-tagline{background:rgba(19,34,46,.6);padding:.55rem .85rem;border-radius:10px;}
+/* Contact/Team sub-hero over the photo: stronger scrim for small light text */
+.subhero .hero-scrim{background:rgba(19,34,46,.7);}
+/* Mobile menu is removed from tab order while closed */
+.mobile-menu{visibility:hidden;transition:transform .32s ease,visibility 0s linear .32s;}
+.mobile-menu.open{visibility:visible;transition:transform .32s ease;}
+/* Non-link nav label (Client Corner has no destination yet) */
+.nav-label{color:#fff;font-weight:600;font-size:1rem;white-space:nowrap;text-shadow:0 1px 6px rgba(0,0,0,.45);cursor:default;}
+.mobile-menu .nav-label{color:var(--ink);font-family:var(--font-head);font-size:1.6rem;padding:.6rem 0;border-bottom:1px solid var(--line);text-shadow:none;}
+/* Background-video pause control (WCAG 2.2.2) */
+.video-toggle{position:absolute;z-index:3;left:clamp(1.2rem,4vw,2.5rem);bottom:1.1rem;display:inline-flex;align-items:center;gap:.45rem;
+  background:rgba(19,34,46,.75);color:#fff;border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:.5rem .9rem;font:700 .85rem var(--font-body);cursor:pointer;}
+.video-toggle:hover{background:rgba(19,34,46,.92);}
+@media (prefers-reduced-motion:reduce){.video-toggle{display:none;}}
+/* Form validation messaging */
+.req{color:#8E2B23;font-weight:700;}
+.field-error{display:block;color:#8E2B23;font-size:.85rem;font-weight:700;margin-top:.3rem;}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#8E2B23;}
+.form-status{margin-top:.8rem;font-weight:700;color:#1E6125;}

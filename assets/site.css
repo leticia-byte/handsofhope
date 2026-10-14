@@ -493,3 +493,6 @@ footer .open-status .os-text{color:var(--ink);}
 footer .open-status.os-open .os-text{color:#1E6125;}
 footer .open-status.os-soon .os-text{color:#7A4507;}
 footer .open-status.os-closed .os-text{color:#8E2B23;}
+
+/* Contact page: mural on the left (same height) */
+.contact.mural-bg::before{right:auto;left:2%;}

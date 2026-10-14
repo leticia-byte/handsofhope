@@ -496,3 +496,4 @@ footer .open-status.os-closed .os-text{color:#8E2B23;}
 
 /* Contact page: mural on the left (same height) */
 .contact.mural-bg::before{right:auto;left:2%;}
+.foot-after{color:#7A4507;font-weight:700;}

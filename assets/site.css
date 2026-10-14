@@ -464,3 +464,12 @@ footer{background:var(--ink);color:#C9D8E1;padding:clamp(3rem,6vw,4.5rem) 0 1.5r
 
 .bio .avatar.m2{background:#35617A;}
 .bio + .bio{margin-top:1.6rem;}
+
+/* Header: keep nav labels and buttons on one line at medium widths */
+.nav-links a,.nav-cta .btn,.nav-tab,.nav-label{white-space:nowrap;}
+@media (max-width:1280px){
+  .site-header .wrap{padding-left:2rem;padding-right:2rem;}
+  .nav-links{gap:1.2rem;}
+  .nav-cta{gap:.7rem;}
+  .nav-cta .btn{padding:.7rem 1.1rem;font-size:.92rem;}
+}

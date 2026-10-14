@@ -119,8 +119,8 @@ section{position:relative;}
 .hamburger{grid-column:3;justify-self:end;}
 .brand svg{flex:none;}
 /* Large logo overhangs a compact bar so the header stays slim */
-.brand-logo{flex:none;width:150px;height:150px;margin-bottom:-66px;transition:width .3s ease,height .3s ease,margin .3s ease;}
-.nav.solid .brand-logo{width:150px;height:150px;margin-bottom:-66px;}
+.brand-logo{flex:none;width:150px;height:150px;margin-bottom:-140px;transition:width .3s ease,height .3s ease,margin .3s ease;}
+.nav.solid .brand-logo{width:150px;height:150px;margin-bottom:-140px;}
 .brand .bt{font-family:var(--font-head);font-weight:600;font-size:1.28rem;line-height:1;letter-spacing:-.01em;}
 .brand .bs{display:block;font-family:var(--font-body);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-top:2px;}
 .nav-links{display:flex;align-items:center;gap:1.9rem;list-style:none;margin:0;padding:0;}
@@ -158,7 +158,7 @@ section{position:relative;}
 .hero-fallback{display:none;}
 @media (prefers-reduced-motion:reduce){.hero-video{display:none;}.hero-fallback{display:block;}}
 .hero-scrim{position:absolute;inset:0;background:rgba(33,58,76,.55);}
-.hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.2rem,4vw,2.5rem);width:100%;}
+.hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.2rem,4vw,2.5rem) 0 clamp(1.08rem,3.6vw,2.25rem);width:100%;}
 .hero-card{max-width:620px;background:rgba(246,242,234,.9);backdrop-filter:blur(4px);border-radius:26px;
   padding:clamp(1.8rem,4vw,2.8rem);box-shadow:0 30px 60px -30px rgba(33,58,76,.6);border:1px solid rgba(255,255,255,.6);}
 .hero h1{margin-bottom:.35em;}

@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/site.css?v=20261014e" />
+<link rel="stylesheet" href="assets/site.css?v=20261014f" />
 <style>
 .rev-page .wrap{max-width:none;padding-left:clamp(1.25rem,5vw,6em);padding-right:clamp(1.25rem,5vw,6em);}
 .rev-masonry{columns:2 360px;column-gap:1.4rem;margin:2.4rem 0 2rem;}
@@ -187,7 +187,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ul>
           <li><a href="index.html#story">Our Story</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="index.html#art">Our Space</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
@@ -252,6 +251,12 @@ r();setInterval(r,60000);})();
     });
   }
 })();
+</script>
+<script>
+/* Sticky header: solid backing + collapsed top bar once the page scrolls */
+(function(){var h=document.querySelector('.site-header');if(!h)return;
+function s(){h.classList.toggle('scrolled',window.scrollY>40);}
+s();window.addEventListener('scroll',s,{passive:true});})();
 </script>
 </body>
 </html>

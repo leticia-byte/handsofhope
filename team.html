@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/site.css?v=20261014e" />
+<link rel="stylesheet" href="assets/site.css?v=20261014f" />
 <style>
 .bio{display:grid;grid-template-columns:300px 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.6rem,3.5vw,2.8rem);box-shadow:0 18px 36px -18px rgba(33,58,76,.28);margin-top:2.4rem;}
 .bio .avatar{width:100%;max-width:300px;height:auto;aspect-ratio:3/4;font-size:4rem;margin:0;}
@@ -201,7 +201,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ul>
           <li><a href="index.html#story">Our Story</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="index.html#art">Our Space</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
@@ -266,6 +265,12 @@ r();setInterval(r,60000);})();
     });
   }
 })();
+</script>
+<script>
+/* Sticky header: solid backing + collapsed top bar once the page scrolls */
+(function(){var h=document.querySelector('.site-header');if(!h)return;
+function s(){h.classList.toggle('scrolled',window.scrollY>40);}
+s();window.addEventListener('scroll',s,{passive:true});})();
 </script>
 </body>
 </html>

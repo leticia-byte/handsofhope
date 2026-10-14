@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="assets/site.css?v=20261014e" />
+<link rel="stylesheet" href="assets/site.css?v=20261014f" />
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -343,7 +343,6 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
         <ul>
           <li><a href="#story">Our Story</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="#art">Our Space</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -468,6 +467,12 @@ document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
     });
   }
 })();
+</script>
+<script>
+/* Sticky header: solid backing + collapsed top bar once the page scrolls */
+(function(){var h=document.querySelector('.site-header');if(!h)return;
+function s(){h.classList.toggle('scrolled',window.scrollY>40);}
+s();window.addEventListener('scroll',s,{passive:true});})();
 </script>
 </body>
 </html>

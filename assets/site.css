@@ -429,3 +429,27 @@ footer{background:var(--ink);color:#C9D8E1;padding:clamp(3rem,6vw,4.5rem) 0 1.5r
 
 /* Hero card sits 10% closer to the left screen edge (applies to both the centering gap and the inner padding) */
 .hero-inner{margin-left:calc(max(0px, (100vw - var(--maxw)) / 2) * .9);margin-right:auto;padding-left:clamp(.972rem,3.24vw,2.025rem);}
+
+/* ---------- Murals as smaller "painted on the wall" patches (overrides full-width wash) ---------- */
+.mural-bg::before{inset:auto;top:50%;right:2%;left:auto;transform:translateY(-50%);
+  width:clamp(300px,44%,620px);aspect-ratio:4/3;background-size:contain;background-position:center;opacity:.24;}
+.mural-left::before{right:auto;left:2%;}
+.mb-party::before{background-image:url(mural-party-paint.webp);}
+.mb-hand::before{background-image:url(mural-hand-paint.webp);}
+.mb-girl::before{background-image:url(mural-girl-paint.webp);}
+.mb-bulldog::before{background-image:url(mural-bulldog-paint.webp);}
+.reviews.mural-bg::before{opacity:.12;}
+@media (max-width:760px){.mural-bg::before{width:78%;opacity:.16;}}
+
+/* Hero card: left gap cut 8% more (total ≈17% vs original) */
+.hero-inner{margin-left:calc(max(0px, (100vw - var(--maxw)) / 2) * .828);padding-left:clamp(.894rem,2.981vw,1.863rem);}
+/* Anchor murals: top-right by default, bottom-left for .mural-left (keeps headings clear, avoids hiding behind cards) */
+.mural-bg::before{top:clamp(1.5rem,4vw,3.5rem);bottom:auto;transform:none;}
+.mural-left::before{top:auto;bottom:clamp(1.5rem,4vw,3.5rem);right:auto;left:2%;}
+
+/* "The story in our name" section background */
+.story{background:#DFE3E4;}
+
+/* Murals 8% larger */
+.mural-bg::before{width:clamp(324px,47.5%,670px);}
+@media (max-width:760px){.mural-bg::before{width:84%;}}

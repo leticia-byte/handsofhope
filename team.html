@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <script>document.documentElement.classList.add('mural-js')</script>
-<link rel="stylesheet" href="assets/site.css?v=20261016a" />
+<link rel="stylesheet" href="assets/site.css?v=20261016b" />
 <style>
 .bio{display:grid;grid-template-columns:300px 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.6rem,3.5vw,2.8rem);box-shadow:0 18px 36px -18px rgba(33,58,76,.28);margin-top:2.4rem;}
 .bio .avatar{width:100%;max-width:300px;height:auto;aspect-ratio:3/4;font-size:4rem;margin:0;}
@@ -289,9 +289,16 @@ var b=v.closest('.hero').querySelector('[data-video-toggle]');if(!b)return;b.set
 var l=b.querySelector('span');if(l)l.textContent='Play video';var i=b.querySelector('svg');if(i)i.innerHTML='<path d="M8 5v14l11-7z"/>';});})();
 </script>
 <script>
-(function(){var els=document.querySelectorAll('.mural-bg,.rev-mural');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('mural-in');});return;}
-var o=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('mural-in');o.unobserve(x.target);}});},{threshold:0.18});
-els.forEach(function(e){o.observe(e);});})();
+(function(){var els=[].slice.call(document.querySelectorAll('.mural-bg,.rev-mural,.mural-anim'));if(!els.length)return;
+function anchor(e,r){if(e.classList.contains('rev-mural')||e.classList.contains('mural-anim'))return r.top+r.height/2;
+if(e.classList.contains('mural-left'))return r.bottom-Math.min(260,r.height/2);
+if(e.classList.contains('contact'))return r.top+Math.min(260,r.height/2);
+return r.top+r.height/2;}
+function check(){var vh=window.innerHeight;els=els.filter(function(e){var r=e.getBoundingClientRect(),y=anchor(e,r);
+if(y<vh*0.85&&r.bottom>0){e.classList.add('mural-in');return false;}return true;});
+if(!els.length){window.removeEventListener('scroll',on);window.removeEventListener('resize',on);}}
+var t=0;function on(){if(t)return;t=requestAnimationFrame(function(){t=0;check();});}
+window.addEventListener('scroll',on,{passive:true});window.addEventListener('resize',on);check();})();
 </script>
 </body>
 </html>

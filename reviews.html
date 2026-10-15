@@ -20,13 +20,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="assets/site.css?v=20261015c" />
 <style>
 .rev-page{padding-top:clamp(220px,24vw,250px);}
-/* Reviews mural sits below the last review (bottom-right), in its own space */
-.rev-page{padding-bottom:calc(clamp(220px,24vw,330px) + 3rem);}
-.rev-page.mural-bg::before{top:auto;bottom:1.5rem;height:clamp(220px,24vw,330px);background-position:right bottom;}
 .rev-page h1{font-size:clamp(2.2rem,4.4vw,3.4rem);color:#fff;line-height:1.1;}
 .rev-page h1 .paint{color:#F2D9AE;}
 .rev-page .wrap{max-width:none;padding-left:clamp(1.25rem,5vw,6em);padding-right:clamp(1.25rem,5vw,6em);}
-.rev-masonry{columns:2 360px;column-gap:1.4rem;margin:2.4rem 0 2rem;}
+.rev-masonry{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:start;margin:2.4rem 0 2rem;}
+.rev-col{display:flex;flex-direction:column;gap:1.4rem;}
+.rev-masonry .rev-card{margin:0;}
+/* Mural moved into the left column, beside Mallory's review */
+.rev-page.mural-bg::before{display:none;}
+.rev-mural{width:100%;aspect-ratio:900/405;background:url(assets/mural-girl-paint.webp) left top/contain no-repeat;opacity:.12;}
+@media(max-width:760px){.rev-masonry{grid-template-columns:1fr;}.rev-mural{display:none;}}
 .rev-masonry .rev-card{break-inside:avoid;margin:0 0 1.4rem;display:block;}
 .rev-masonry .rev-card blockquote{margin:0;}
 .rev-masonry .rev-card p{font-size:1.02rem;line-height:1.65;}
@@ -123,6 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="eyebrow">In their words</p>
     <h1>What families are <span class="paint">saying<svg viewBox="0 0 300 26" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12 C 40 9, 95 13, 150 11 C 200 9, 250 12, 297 10 C 290 15, 255 18, 205 17 C 150 16, 95 19, 45 18 C 22 18, 5 16, 4 12 Z" fill="#E8C888" filter="url(#brushTex)"/></svg></span></h1>
     <div class="rev-masonry">
+      <div class="rev-col">
       <article class="rev-card">
         <svg class="rev-quote" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V13C0 5.8 3.6 1.4 10.6 0l1.3 3C8 4.3 6.3 7 6.2 10H11v12H0zm16 0V13c0-7.2 3.6-11.6 10.6-13l1.3 3c-3.9 1.3-5.6 4-5.7 7H27v12H16z"/></svg>
         <blockquote>
@@ -133,6 +137,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </blockquote>
         <div class="rev-by"><span class="who">— Holley</span><br>Southern Olive Doodles<br><span class="rev-src">Facebook Review</span></div>
       </article>
+      <div class="rev-mural" aria-hidden="true"></div>
+      </div>
+      <div class="rev-col">
       <article class="rev-card">
         <svg class="rev-quote" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V13C0 5.8 3.6 1.4 10.6 0l1.3 3C8 4.3 6.3 7 6.2 10H11v12H0zm16 0V13c0-7.2 3.6-11.6 10.6-13l1.3 3c-3.9 1.3-5.6 4-5.7 7H27v12H16z"/></svg>
         <blockquote>
@@ -154,6 +161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </blockquote>
         <div class="rev-by"><span class="who">— Lee V.</span><br><span class="rev-src">Google Review</span></div>
       </article>
+      </div>
     </div>
     <p style="margin-top:1.2rem"><a class="btn btn-light" href="https://www.google.com/search?q=Hands+of+Hope+Animal+Hospital+Byron+GA+reviews" target="_blank" rel="noopener">Read more on Google <span class="sr-only">(opens in a new tab)</span></a></p>
   </div>

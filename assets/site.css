@@ -505,3 +505,6 @@ footer .open-status.os-closed .os-text{color:#8E2B23;}
 .site-header.scrolled .topbar{max-height:0;opacity:0;}
 html{scroll-padding-top:130px;}
 @media (prefers-reduced-motion:reduce){.site-header,.site-header .topbar{transition:none;}}
+
+/* Blue bands: #CFE3ECB5 */
+.diff,.contact{background:#CFE3ECB5;}

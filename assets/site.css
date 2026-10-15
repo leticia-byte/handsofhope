@@ -508,3 +508,10 @@ html{scroll-padding-top:130px;}
 
 /* Blue bands: #CFE3ECB5 */
 .diff,.contact{background:#CFE3ECB5;}
+
+/* Client Corner dropdown */
+.cc-drop{position:relative;}
+.cc-drop .dropdown{left:auto;right:0;min-width:190px;}
+.cc-drop .dropdown a{display:block;color:var(--ink);text-shadow:none;padding:.55rem .7rem;border-radius:8px;font-weight:600;text-decoration:none;white-space:nowrap;}
+.cc-drop .dropdown a:hover{background:var(--sky-soft);}
+.mobile-menu .mm-sub{font-size:1.25rem;padding-left:1.2rem;}

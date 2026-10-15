@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/site.css?v=20261015a" />
+<link rel="stylesheet" href="assets/site.css?v=20261015b" />
 <style>
 .svc-page .svc-card h3{font-size:1.25rem;margin-bottom:.35em;}
 .svc-page .wrap{max-width:none;padding-left:clamp(1.25rem,5vw,6em);padding-right:clamp(1.25rem,5vw,6em);}
@@ -67,13 +67,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ul class="dropdown">
           <li><a href="team.html">Team</a></li>
           <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="payment.html">Payment Options</a></li>
         </ul>
       </li>
       <li><a href="services.html">Services</a></li>
     </ul>
     <div class="nav-cta">
-      <span class="nav-label">Client Corner <span class="sr-only">(coming soon)</span></span>
+      <div class="has-dropdown cc-drop">
+        <a class="nav-tab" href="payment.html">Client Corner <span class="caret" aria-hidden="true">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="payment.html">Payment Options</a></li>
+        </ul>
+      </div>
       <a class="nav-tab" href="contact.html">Contact Us</a>
       <a class="btn btn-ghost" href="tel:+14783361999">(478) 336-1999</a>
       <a class="btn btn-primary" href="contact.html">Request an Appointment</a>
@@ -91,8 +95,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <a href="team.html">Team</a>
   <a href="reviews.html">Reviews</a>
   <a href="services.html">Services</a>
-  <a href="payment.html">Payment Options</a>
-  <span class="nav-label">Client Corner <span class="sr-only">(coming soon)</span></span>
+  <span class="nav-label">Client Corner</span>
+  <a class="mm-sub" href="payment.html">Payment Options</a>
   <a href="contact.html">Contact Us</a>
   <a class="btn btn-ghost" href="tel:+14783361999">(478) 336-1999</a>
   <a class="btn btn-primary" href="contact.html">Request an Appointment</a>

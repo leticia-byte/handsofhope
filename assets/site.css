@@ -508,3 +508,20 @@ html{scroll-padding-top:130px;}
 .topbar .open-status.os-soon .os-text{color:#FBE3B0;}
 .topbar .open-status.os-closed .os-text{color:#FADAD5;}
 footer.mural-bg::before{opacity:.16;}
+
+.topbar .award,.topbar .tb-addr,.tb-hours span{white-space:nowrap;}
+@media (max-width:1240px){.topbar .tb-addr{display:none;}}
+@media (max-width:900px){.topbar .tb-hours{display:none;}}
+
+.mural-js .mural-bg::before,.mural-js .rev-mural{
+  -webkit-mask-image:linear-gradient(90deg,#000 0 42%,transparent 58% 100%);mask-image:linear-gradient(90deg,#000 0 42%,transparent 58% 100%);
+  -webkit-mask-size:260% 100%;mask-size:260% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:100% 0;mask-position:100% 0;
+  filter:blur(6px);
+  transition:-webkit-mask-position 2.4s cubic-bezier(.65,.05,.25,1) .15s,mask-position 2.4s cubic-bezier(.65,.05,.25,1) .15s,filter 1.8s ease .6s;}
+.mural-js .mural-bg:not(.mural-left):not(.contact)::before{
+  -webkit-mask-image:linear-gradient(270deg,#000 0 42%,transparent 58% 100%);mask-image:linear-gradient(270deg,#000 0 42%,transparent 58% 100%);
+  -webkit-mask-position:0 0;mask-position:0 0;}
+.mural-js .mural-bg.mural-in::before,.mural-js .rev-mural.mural-in{-webkit-mask-position:0 0;mask-position:0 0;filter:blur(0);}
+.mural-js .mural-bg.mural-in:not(.mural-left):not(.contact)::before{-webkit-mask-position:100% 0;mask-position:100% 0;}
+@media (prefers-reduced-motion:reduce){.mural-js .mural-bg::before,.mural-js .mural-bg:not(.mural-left):not(.contact)::before,.mural-js .rev-mural{-webkit-mask-image:none;mask-image:none;filter:none;transition:none;}}

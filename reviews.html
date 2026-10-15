@@ -20,6 +20,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="assets/site.css?v=20261015c" />
 <style>
 .rev-page{padding-top:clamp(220px,24vw,250px);}
+/* Reviews mural sits below the last review (bottom-right), in its own space */
+.rev-page{padding-bottom:calc(clamp(220px,24vw,330px) + 3rem);}
+.rev-page.mural-bg::before{top:auto;bottom:1.5rem;height:clamp(220px,24vw,330px);background-position:right bottom;}
 .rev-page h1{font-size:clamp(2.2rem,4.4vw,3.4rem);color:#fff;line-height:1.1;}
 .rev-page h1 .paint{color:#F2D9AE;}
 .rev-page .wrap{max-width:none;padding-left:clamp(1.25rem,5vw,6em);padding-right:clamp(1.25rem,5vw,6em);}

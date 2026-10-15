@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/site.css?v=20261015b" />
+<link rel="stylesheet" href="assets/site.css?v=20261015c" />
 <style>
 /* No-hero page: solid header from the start */
 .no-hero .site-header{background:rgba(19,34,46,.96);}
@@ -34,8 +34,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .fin-card h3{font-size:1.45rem;margin-bottom:.5em;display:flex;align-items:center;gap:.75rem;}
 .fin-card p{flex:1;margin:0 0 1.5rem;}
 .fin-card .btn{align-self:flex-start;}
+.fin-logo{min-height:52px;margin-bottom:1.1rem;}
+.fin-logo img{width:auto;max-width:100%;display:block;}
 .fin-ico{width:48px;height:48px;border-radius:14px;background:var(--sage);display:grid;place-items:center;color:var(--sage-deep);flex:none;}
 .insure{padding:clamp(3.5rem,8vw,6rem) 0;background:#CFE3ECB5;}
+.insure.pay-page{padding-top:12em;}
 .insure .lead-block{max-width:68ch;}
 .insure p{font-size:1.08rem;color:var(--ink-soft);}
 .ins-list{list-style:none;padding:0;margin:1.8rem 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
@@ -147,12 +150,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div class="fin-grid">
       <article class="fin-card">
-        <h3><span class="fin-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.2-9C1 8.5 3 5 6.5 5 8.6 5 10 6.3 12 8.5 14 6.3 15.4 5 17.5 5 21 5 23 8.5 21.2 12 19 16.5 12 21 12 21z"/></svg></span>Care Credit</h3>
+        <h3 class="fin-logo"><img src="assets/carecredit-logo.png" width="356" height="49" alt="CareCredit" style="height:36px" /></h3>
         <p>Care Credit works just like a credit card without the annual fee. For every purchase, you’ll receive 6 months interest free, and low monthly payments. It takes just 5 minutes to complete an application and determine your approval.</p>
         <a class="btn btn-primary" href="https://www.carecredit.com/apply/" target="_blank" rel="noopener">Apply Now <span class="sr-only">for Care Credit (opens in a new tab)</span></a>
       </article>
       <article class="fin-card">
-        <h3><span class="fin-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></span>Scratch Pay</h3>
+        <h3 class="fin-logo"><img src="assets/scratchpay-logo.png" width="720" height="174" alt="Scratch Pay" style="height:46px" /></h3>
         <p>Scratch Pay works like a loan and offers simple and friendly payment plans. Select a payment plan that works for your budget and check your interest rate any time without affecting your credit score. Application process takes seconds and is free!</p>
         <a class="btn btn-primary" href="https://scratchpay.com/" target="_blank" rel="noopener">Apply Now <span class="sr-only">for Scratch Pay (opens in a new tab)</span></a>
       </article>

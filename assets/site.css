@@ -515,3 +515,16 @@ html{scroll-padding-top:130px;}
 .cc-drop .dropdown a{display:block;color:var(--ink);text-shadow:none;padding:.55rem .7rem;border-radius:8px;font-weight:600;text-decoration:none;white-space:nowrap;}
 .cc-drop .dropdown a:hover{background:var(--sky-soft);}
 .mobile-menu .mm-sub{font-size:1.25rem;padding-left:1.2rem;}
+
+/* ===== Murals: always fit inside their section (never cropped) =====
+   The patch box now spans the section's height (minus a margin) and the
+   image scales down with background-size:contain, so it can't run past
+   the section edge on short sections. */
+.mural-bg::before{
+  top:clamp(1.25rem,3vw,2.5rem);bottom:clamp(1.25rem,3vw,2.5rem);
+  right:2%;left:auto;transform:none;aspect-ratio:auto;height:auto;
+  width:clamp(324px,47.5%,670px);
+  background-size:contain;background-repeat:no-repeat;background-position:right top;}
+.mural-left::before,.contact.mural-bg::before{right:auto;left:2%;background-position:left bottom;}
+.contact.mural-bg::before{background-position:left top;}
+@media (max-width:760px){.mural-bg::before{width:84%;}}

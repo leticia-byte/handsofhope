@@ -524,7 +524,7 @@ html{scroll-padding-top:130px;}
   top:clamp(1.25rem,3vw,2.5rem);bottom:clamp(1.25rem,3vw,2.5rem);
   right:2%;left:auto;transform:none;aspect-ratio:auto;height:auto;
   width:clamp(324px,47.5%,670px);
-  background-size:contain;background-repeat:no-repeat;background-position:right top;}
+  background-size:contain;background-repeat:no-repeat;background-position:right center;}
 .mural-left::before,.contact.mural-bg::before{right:auto;left:2%;background-position:left bottom;}
 .contact.mural-bg::before{background-position:left top;}
 @media (max-width:760px){.mural-bg::before{width:84%;}}

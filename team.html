@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/site.css?v=20261015d" />
+<link rel="stylesheet" href="assets/site.css?v=20261015f" />
 <style>
 .bio{display:grid;grid-template-columns:300px 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.6rem,3.5vw,2.8rem);box-shadow:0 18px 36px -18px rgba(33,58,76,.28);margin-top:2.4rem;}
 .bio .avatar{width:100%;max-width:300px;height:auto;aspect-ratio:3/4;font-size:4rem;margin:0;}
@@ -69,13 +69,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ===================== NAV ===================== -->
 <nav class="nav" id="nav" aria-label="Primary">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Hands of Hope Animal Hospital — home">
+    <a class="brand" href="services.html" aria-label="Hands of Hope Animal Hospital — Services">
       <img class="brand-logo" src="assets/hands-of-hope-logo.png" width="150" height="150" alt="Hands of Hope Animal Hospital logo" />
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><span class="nav-off" aria-disabled="true">Home <span class="sr-only">(coming soon)</span></span></li>
       <li class="has-dropdown">
-        <a href="index.html#story">About <span class="caret" aria-hidden="true">▾</span></a>
+        <span class="nav-drop-label" tabindex="0">About <span class="caret" aria-hidden="true">▾</span></span>
         <ul class="dropdown">
           <li><a href="team.html">Team</a></li>
           <li><a href="reviews.html">Reviews</a></li>
@@ -102,8 +102,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </header>
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <button class="mm-close" id="mmClose" aria-label="Close menu">&times;</button>
-  <a href="index.html">Home</a>
-  <a href="index.html#story">About</a>
+  <span class="nav-off" aria-disabled="true">Home <span class="sr-only">(coming soon)</span></span>
+  <span class="nav-label">About</span>
   <a href="team.html">Team</a>
   <a href="reviews.html">Reviews</a>
   <a href="services.html">Services</a>
@@ -218,7 +218,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Hands+of+Hope+Animal+Hospital+6009+Watson+Blvd+Byron+GA+31008" target="_blank" rel="noopener">6009 Watson Blvd, Suite 430<br>Byron, GA 31008 <span class="sr-only">(opens in a new tab)</span></a><br><br>
           <a href="tel:+14783361999">(478) 336-1999</a> &nbsp;·&nbsp; Text <a href="sms:+18447861354">(844) 786-1354</a><br>
           <a href="mailto:info@handsofhopeanimalhospital.com">info@handsofhopeanimalhospital.com</a><br><br>
-          Mon–Fri 8:00am – 5:30pm &nbsp;<span class="open-status" data-openstatus><span class="os-dot" aria-hidden="true"></span><span class="os-text">Checking hours…</span></span><br>
+          Monday – Friday:  8:00am – 5:30pm &nbsp;<span class="open-status" data-openstatus><span class="os-dot" aria-hidden="true"></span><span class="os-text">Checking hours…</span></span><br>
           <span class="foot-after">After hours: Middle Georgia Emergency Veterinary Center</span>
         </address>
       </div>

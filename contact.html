@@ -17,7 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/site.css?v=20261015d" />
+<link rel="stylesheet" href="assets/site.css?v=20261015f" />
 <style>
 .map-wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.2rem,4vw,2.5rem) clamp(3rem,7vw,5rem);}
 .map-wrap iframe{width:100%;height:430px;border:0;border-radius:var(--radius);box-shadow:var(--shadow);display:block;}
@@ -65,13 +65,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ===================== NAV ===================== -->
 <nav class="nav" id="nav" aria-label="Primary">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Hands of Hope Animal Hospital — home">
+    <a class="brand" href="services.html" aria-label="Hands of Hope Animal Hospital — Services">
       <img class="brand-logo" src="assets/hands-of-hope-logo.png" width="150" height="150" alt="Hands of Hope Animal Hospital logo" />
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><span class="nav-off" aria-disabled="true">Home <span class="sr-only">(coming soon)</span></span></li>
       <li class="has-dropdown">
-        <a href="index.html#story">About <span class="caret" aria-hidden="true">▾</span></a>
+        <span class="nav-drop-label" tabindex="0">About <span class="caret" aria-hidden="true">▾</span></span>
         <ul class="dropdown">
           <li><a href="team.html">Team</a></li>
           <li><a href="reviews.html">Reviews</a></li>
@@ -100,8 +100,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <button class="mm-close" id="mmClose" aria-label="Close menu">&times;</button>
-  <a href="index.html">Home</a>
-  <a href="index.html#story">About</a>
+  <span class="nav-off" aria-disabled="true">Home <span class="sr-only">(coming soon)</span></span>
+  <span class="nav-label">About</span>
   <a href="team.html">Team</a>
   <a href="reviews.html">Reviews</a>
   <a href="services.html">Services</a>
@@ -143,7 +143,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <ul class="info-list">
         <li>
           <span class="i-ico"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 6.4v6l3.8 2.3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span><b>Hours</b><span class="hours-line"><span class="open-status" data-openstatus><span class="os-dot" aria-hidden="true"></span><span class="os-text">Checking hours…</span></span>Monday – Friday, 8:00am – 5:30pm</span></span>
+          <span><b>Hours</b><span class="hours-line"><span class="open-status" data-openstatus><span class="os-dot" aria-hidden="true"></span><span class="os-text">Checking hours…</span></span>Monday – Friday:  8:00am – 5:30pm</span></span>
         </li>
         <li>
           <span class="i-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.6 3H4.4C3.6 3 3 3.6 3 4.4 3 13.6 10.4 21 19.6 21c.8 0 1.4-.6 1.4-1.4v-2.2c0-.66-.46-1.23-1.1-1.37l-2.9-.64c-.57-.13-1.16.05-1.56.47l-.86.9a14.5 14.5 0 01-5.24-5.24l.9-.86c.42-.4.6-.99.47-1.56l-.64-2.9C8.83 3.46 8.26 3 7.6 3z"/></svg></span>

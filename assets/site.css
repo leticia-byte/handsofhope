@@ -528,3 +528,12 @@ html{scroll-padding-top:130px;}
 .mural-left::before,.contact.mural-bg::before{right:auto;left:2%;background-position:left bottom;}
 .contact.mural-bg::before{background-position:left top;}
 @media (max-width:760px){.mural-bg::before{width:84%;}}
+
+/* Footer logo +10% */
+.foot-logo{width:123px;height:123px;}
+
+/* Disabled (unbuilt) nav items */
+.nav-off{color:rgba(255,255,255,.45);font-weight:600;font-size:1rem;cursor:not-allowed;white-space:nowrap;text-shadow:none;}
+.mobile-menu .nav-off{color:#9AA3AA;font-family:var(--font-head);font-size:1.6rem;padding:.6rem 0;border-bottom:1px solid var(--line);}
+.nav-drop-label{color:#fff;font-weight:600;font-size:1rem;cursor:default;white-space:nowrap;text-shadow:0 1px 6px rgba(0,0,0,.45);padding:.3rem 0;}
+.nav-drop-label:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:4px;}

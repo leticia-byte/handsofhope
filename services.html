@@ -29,7 +29,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="assets/site.css?v=20261016d" />
 <style>
 .svc-page{background:#CFE3ECB5;}
-.svc-page.mural-bg::before{background-position:right top;}
+.svc-page.mural-bg::before{display:none;}
+.svc-page .services-head{max-width:none;margin-bottom:1.6rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;}
+.svc-mural{flex:0 1 560px;align-self:stretch;min-height:clamp(170px,19vw,270px);margin:-1rem 0 .5rem;background:url(assets/mural-hand-paint-v3.webp) right center/contain no-repeat;opacity:.3;}
+@media(max-width:760px){.svc-mural{display:none;}}
 .svc-page .svc-card h3{font-size:1.25rem;margin-bottom:.35em;}
 .svc-page .wrap{max-width:none;padding-left:clamp(1.25rem,5vw,6em);padding-right:clamp(1.25rem,5vw,6em);}
 </style>
@@ -144,6 +147,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="wrap">
     <div class="services-head">
       <h2>Our <span class="paint">Services<svg viewBox="0 0 300 26" preserveAspectRatio="none" aria-hidden="true"><path d="M6 13 C 60 8, 120 8, 180 11 C 225 13, 262 9, 295 12 C 262 18, 220 17, 170 17 C 110 17, 55 19, 8 16 C 6 15, 5 14, 6 13 Z" fill="#E8C888" filter="url(#brushTex)"/></svg></span></h2>
+      <div class="svc-mural mural-anim" aria-hidden="true"></div>
     </div>
     <div class="svc-grid">
       <article class="svc-card">

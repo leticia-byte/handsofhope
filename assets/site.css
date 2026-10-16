@@ -526,3 +526,14 @@ footer.mural-bg::before{opacity:.16;}
 .mural-js .mural-bg.mural-in:not(.mural-left):not(.contact)::before{-webkit-mask-position:100% 0;mask-position:100% 0;}
 @media (prefers-reduced-motion:reduce){.mural-js .mural-bg::before,.mural-js .mural-bg:not(.mural-left):not(.contact)::before,.mural-js .rev-mural,.mural-js .mural-anim{-webkit-mask-image:none;mask-image:none;filter:none;transition:none;}}
 .mb-hand::before{top:clamp(2.75rem,5vw,4.5rem);bottom:clamp(2.75rem,5vw,4.5rem);}
+
+.foot-grid>*,.contact .wrap>*,.contact-copy,.info-list li>span{min-width:0;}
+.info-list a,.foot-addr a,.foot-brand p{overflow-wrap:anywhere;}
+.foot-col li a,.info-list a,.foot-addr a{display:inline-block;padding:.2rem 0;}
+@media (max-width:900px){.topbar .award{white-space:normal;}}
+@media (max-width:640px){
+  .topbar .wrap{justify-content:center;text-align:center;}
+  .topbar .award{font-size:.78rem;line-height:1.35;padding:.35rem 0;}
+  .foot-col li{margin-bottom:.35rem;}
+  .foot-bottom{flex-direction:column;align-items:flex-start;}
+}

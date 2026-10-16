@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <script>document.documentElement.classList.add('mural-js')</script>
-<link rel="stylesheet" href="assets/site.css?v=20261016d" />
+<link rel="stylesheet" href="assets/site.css?v=20261016f" />
 <style>
 .map-wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.2rem,4vw,2.5rem) clamp(3rem,7vw,5rem);}
 .map-wrap iframe{width:100%;height:430px;border:0;border-radius:var(--radius);box-shadow:var(--shadow);display:block;}
@@ -79,7 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <nav class="nav" id="nav" aria-label="Primary">
   <div class="wrap">
     <a class="brand" href="services.html" aria-label="Hands of Hope Animal Hospital — Services">
-      <img class="brand-logo" src="assets/hands-of-hope-logo.png" width="150" height="150" alt="Hands of Hope Animal Hospital logo" />
+      <img class="brand-logo" src="assets/hands-of-hope-logo.webp" width="150" height="150" alt="Hands of Hope Animal Hospital logo" />
     </a>
     <ul class="nav-links">
       <li><span class="nav-off" aria-disabled="true">Home <span class="sr-only">(coming soon)</span></span></li>
@@ -131,10 +131,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <section class="hero">
   <div class="hero-bg">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-contact-flip-poster.jpg" aria-hidden="true">
-      <source src="assets/hero-contact-flip.mp4" type="video/mp4" />
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-contact-v2-poster.jpg" aria-hidden="true">
+      <source src="assets/hero-contact-v2-m.mp4" type="video/mp4" media="(max-width: 760px)" />
+      <source src="assets/hero-contact-v2.mp4" type="video/mp4" />
     </video>
-    <img class="hero-fallback" src="assets/hero-contact-flip-poster.jpg" alt="A relaxed cat being gently petted" />
+    <img class="hero-fallback" src="assets/hero-contact-v2-poster.jpg" alt="A relaxed cat being gently petted" />
   </div>
   <div class="hero-scrim"></div>
   <button class="video-toggle" type="button" aria-pressed="false" data-video-toggle title="Pause / play video"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><span class="sr-only">Pause video</span></button>

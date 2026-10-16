@@ -45,7 +45,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .rev-masonry .rev-card .rev-by{margin-top:1.1rem;color:#DCE7EE;font-size:.9rem;line-height:1.5;}
 .rev-masonry .rev-card .who{display:block;}
 .rev-src{display:inline-flex;align-items:center;gap:.4rem;margin-top:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#E8C888;}
-.rev-stars{display:flex;gap:.2rem;color:#E8C888;margin-bottom:.9rem;}
+.rev-stars{display:flex;gap:.2rem;color:#E8C888;margin:1.1rem 0 .2rem;}
+.rev-masonry .rev-card .rev-stars + .rev-by{margin-top:.5rem;}
+.mural-js .rev-stars svg{opacity:0;transform:scale(.2) rotate(-40deg);}
+.mural-js .rev-stars.stars-in svg{animation:starPop .55s cubic-bezier(.34,1.56,.64,1) forwards;}
+.mural-js .rev-stars.stars-in svg:nth-child(2){animation-delay:.12s;}
+.mural-js .rev-stars.stars-in svg:nth-child(3){animation-delay:.24s;}
+.mural-js .rev-stars.stars-in svg:nth-child(4){animation-delay:.36s;}
+.mural-js .rev-stars.stars-in svg:nth-child(5){animation-delay:.48s;}
+@keyframes starPop{0%{opacity:0;transform:scale(.2) rotate(-40deg);}60%{opacity:1;transform:scale(1.25) rotate(8deg);}100%{opacity:1;transform:scale(1) rotate(0);}}
+@media (prefers-reduced-motion:reduce){.mural-js .rev-stars svg,.mural-js .rev-stars.stars-in svg{opacity:1;transform:none;animation:none;}}
 .rev-quote{display:block;color:#E8C888;margin-bottom:.6rem;}
 </style>
 <script type="text/javascript">
@@ -144,7 +153,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="rev-masonry">
       <div class="rev-col">
       <article class="rev-card">
-        <div class="rev-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg></div>
         <svg class="rev-quote" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V13C0 5.8 3.6 1.4 10.6 0l1.3 3C8 4.3 6.3 7 6.2 10H11v12H0zm16 0V13c0-7.2 3.6-11.6 10.6-13l1.3 3c-3.9 1.3-5.6 4-5.7 7H27v12H16z"/></svg>
         <blockquote>
           <p>We recently brought our entire litter of puppies to Dr. John Hutchens at Hands of Hope Animal Hospital, and I truly cannot say enough good things about our experience.</p>
@@ -152,33 +160,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <p>Handling a full litter is no small task, but the entire process felt organized, calm, and professional. Every puppy received excellent care, and we left feeling confident and thankful.</p>
           <p>As a breeder, having a vet you trust is everything — and we are so grateful to have found that here. Highly recommend!</p>
         </blockquote>
+        <div class="rev-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg></div>
         <div class="rev-by"><span class="who">— Holley</span><br>Southern Olive Doodles<br><span class="rev-src">Facebook Review</span></div>
       </article>
       <div class="rev-mural" aria-hidden="true"></div>
       </div>
       <div class="rev-col">
       <article class="rev-card">
-        <div class="rev-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg></div>
         <svg class="rev-quote" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V13C0 5.8 3.6 1.4 10.6 0l1.3 3C8 4.3 6.3 7 6.2 10H11v12H0zm16 0V13c0-7.2 3.6-11.6 10.6-13l1.3 3c-3.9 1.3-5.6 4-5.7 7H27v12H16z"/></svg>
         <blockquote>
           <p>Dr. Miller has been an absolute God-sent for our senior dog. Our boy developed severe pain and discomfort very rapidly, in the matter of days and progressed very quickly. He went from acting and playing like a young dog to not even being able to lift his head and yelping out in pain, all very suddenly. We went to one local vet who saw his age and diagnosed him with full-body arthritis and recommended injections that could have severe side effects. This DX didn’t sit right with me and I wanted a 2nd opinion. When I read about Hands of Hope offering services such as acupuncture, laser, and chiropractic services I decided to give them a try. Dr. Miller spent over an hour with us, giving a more definitive diagnosis that actually made sense and then provided an adjustment and laser session that same visit. My boy walked out of that initial visit with his head held high and even wagged his tail which he hadn’t done in weeks due to the pain. And every visit since she has continuously improved his pain to being pain-free in under 2 months. She’s given my boy a second wind at life. I 10000% recommend Dr. Miller and the services she provides. The staff is absolutely wonderful as well and so sweet and caring. I plan to switch to them for all of our vet needs.</p>
         </blockquote>
+        <div class="rev-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg></div>
         <div class="rev-by"><span class="who">— Mallory H.</span><br><span class="rev-src">Google Review</span></div>
       </article>
       <article class="rev-card">
-        <div class="rev-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg></div>
         <svg class="rev-quote" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V13C0 5.8 3.6 1.4 10.6 0l1.3 3C8 4.3 6.3 7 6.2 10H11v12H0zm16 0V13c0-7.2 3.6-11.6 10.6-13l1.3 3c-3.9 1.3-5.6 4-5.7 7H27v12H16z"/></svg>
         <blockquote>
           <p>I absolutely love my vet! We have switched over to them from another office and I have not looked back. Their fear free environment makes my pets feel so comfortable, and they look forward to going into the office. The staff is so welcoming and knowledgeable, they are great at answering any questions and checking in after any surgeries. They don’t price gouge and explain any uncertainties. We love them!!</p>
         </blockquote>
+        <div class="rev-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg></div>
         <div class="rev-by"><span class="who">— Katelyn M.</span><br><span class="rev-src">Google Review</span></div>
       </article>
       <article class="rev-card">
-        <div class="rev-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg></div>
         <svg class="rev-quote" width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true"><path d="M0 22V13C0 5.8 3.6 1.4 10.6 0l1.3 3C8 4.3 6.3 7 6.2 10H11v12H0zm16 0V13c0-7.2 3.6-11.6 10.6-13l1.3 3c-3.9 1.3-5.6 4-5.7 7H27v12H16z"/></svg>
         <blockquote>
           <p>Love the people. They take good care of the animals and the people. They care about your pet. Adding a Veterinarian with chiropractic and acupuncture skills is a great addition.</p>
         </blockquote>
+        <div class="rev-stars" role="img" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.95 6.2 6.8.85-5 4.7 1.3 6.75L12 17.7 5.95 21l1.3-6.75-5-4.7 6.8-.85z"/></svg></div>
         <div class="rev-by"><span class="who">— Lee V.</span><br><span class="rev-src">Google Review</span></div>
       </article>
       </div>
@@ -289,6 +298,11 @@ if(y<vh*0.85&&r.bottom>0){e.classList.add('mural-in');return false;}return true;
 if(!els.length){window.removeEventListener('scroll',on);window.removeEventListener('resize',on);}}
 var t=0;function on(){if(t)return;t=requestAnimationFrame(function(){t=0;check();});}
 window.addEventListener('scroll',on,{passive:true});window.addEventListener('resize',on);check();})();
+</script>
+<script>
+(function(){var st=document.querySelectorAll('.rev-stars');if(!('IntersectionObserver' in window)){st.forEach(function(e){e.classList.add('stars-in');});return;}
+var o=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('stars-in');o.unobserve(x.target);}});},{threshold:0.6});
+st.forEach(function(e){o.observe(e);});})();
 </script>
 </body>
 </html>

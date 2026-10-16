@@ -402,7 +402,7 @@ footer{background:var(--ink);color:#C9D8E1;padding:clamp(3rem,6vw,4.5rem) 0 1.5r
   width:clamp(300px,44%,620px);aspect-ratio:4/3;background-size:contain;background-position:center;opacity:.24;}
 .mural-left::before{right:auto;left:2%;}
 .mb-party::before{background-image:url(mural-party-paint.webp);}
-.mb-hand::before{background-image:url(mural-hand-paint-v2.webp);}
+.mb-hand::before{background-image:url(mural-hand-paint-v3.webp);}
 .mb-girl::before{background-image:url(mural-girl-paint.webp);}
 .mb-bulldog::before{background-image:url(mural-bulldog-paint.webp);}
 .reviews.mural-bg::before{opacity:.12;}
@@ -525,3 +525,4 @@ footer.mural-bg::before{opacity:.16;}
 .mural-js .mural-bg.mural-in::before,.mural-js .rev-mural.mural-in,.mural-js .mural-anim.mural-in{-webkit-mask-position:0 0;mask-position:0 0;filter:blur(0);}
 .mural-js .mural-bg.mural-in:not(.mural-left):not(.contact)::before{-webkit-mask-position:100% 0;mask-position:100% 0;}
 @media (prefers-reduced-motion:reduce){.mural-js .mural-bg::before,.mural-js .mural-bg:not(.mural-left):not(.contact)::before,.mural-js .rev-mural,.mural-js .mural-anim{-webkit-mask-image:none;mask-image:none;filter:none;transition:none;}}
+.mb-hand::before{top:clamp(2.75rem,5vw,4.5rem);bottom:clamp(2.75rem,5vw,4.5rem);}

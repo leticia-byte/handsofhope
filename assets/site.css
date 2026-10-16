@@ -402,7 +402,7 @@ footer{background:var(--ink);color:#C9D8E1;padding:clamp(3rem,6vw,4.5rem) 0 1.5r
   width:clamp(300px,44%,620px);aspect-ratio:4/3;background-size:contain;background-position:center;opacity:.24;}
 .mural-left::before{right:auto;left:2%;}
 .mb-party::before{background-image:url(mural-party-paint.webp);}
-.mb-hand::before{background-image:url(mural-hand-paint.webp);}
+.mb-hand::before{background-image:url(mural-hand-paint-v2.webp);}
 .mb-girl::before{background-image:url(mural-girl-paint.webp);}
 .mb-bulldog::before{background-image:url(mural-bulldog-paint.webp);}
 .reviews.mural-bg::before{opacity:.12;}
